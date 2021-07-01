@@ -1,0 +1,405 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            android:background="@android:color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/head"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whiteColor"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_5"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/stripe_payment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_13"
+                android:orientation="vertical"
+
+                android:layout_marginTop="@dimen/space_1"
+                android:padding="@dimen/space_1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:src="@drawable/ic_order_momey"
+                        android:id="@+id/order_total"
+                        />
+
+                    <TextView
+                        android:id="@+id/order_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/order_total"
+                        android:layout_marginBottom="@dimen/space_mini_4"
+                        android:layout_marginTop="@dimen/space_mini_2"
+                        android:layout_toRightOf="@+id/order_total"
+                        android:paddingLeft="@dimen/space_1"
+                        android:text="@string/order_title"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small_title"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/ui_line_black"/>
+
+                <!--Start Sub Total-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/sub_total_amount_label"
+                        android:layout_width="@dimen/space_15"
+                        android:layout_height="@dimen/space_4"
+                        android:paddingTop="@dimen/space_1"
+                        android:text="@string/sub_total_amount"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/small_title" />
+
+                    <TextView
+                        android:id="@+id/sub_total_amount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/space_4"
+                        android:textColor="@color/textColorPrimary"
+                        android:text="100$"
+                        android:textSize="@dimen/small_title"
+                        android:paddingTop="@dimen/space_1"
+                        android:paddingLeft="@dimen/space_1"
+                        android:layout_toRightOf="@+id/sub_total_amount_label"
+                        android:layout_alignTop="@+id/sub_total_amount_label"
+                        />
+
+                </RelativeLayout>
+                <!--End Sub Total-->
+
+                <!--Start Coupon Discount-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/coupon_discount_label"
+                        android:layout_width="@dimen/space_15"
+                        android:layout_height="@dimen/space_4"
+                        android:paddingTop="@dimen/space_1"
+                        android:text="@string/coupon_discount_amount"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/small_title" />
+
+                    <TextView
+                        android:id="@+id/coupon_discount_amount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/space_4"
+                        android:textColor="@color/textColorPrimary"
+                        android:text="10$"
+                        android:textSize="@dimen/small_title"
+                        android:paddingLeft="@dimen/space_1"
+                        android:layout_toRightOf="@+id/coupon_discount_label"
+                        android:layout_alignTop="@+id/coupon_discount_label"
+                        android:paddingTop="@dimen/space_1"
+                        />
+
+                </RelativeLayout>
+                <!--End Coupon Discount-->
+
+                <!--Start Shipping Cost-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/shipping_cost_label"
+                        android:layout_width="@dimen/space_15"
+                        android:layout_height="@dimen/space_4"
+                        android:paddingTop="@dimen/space_1"
+                        android:text="@string/shipping_cost"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/small_title" />
+
+                    <TextView
+                        android:id="@+id/shipping_cost_amount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/space_4"
+                        android:textColor="@color/textColorPrimary"
+                        android:text="10$"
+                        android:textSize="@dimen/small_title"
+                        android:paddingLeft="@dimen/space_1"
+                        android:layout_toRightOf="@+id/shipping_cost_label"
+                        android:layout_alignTop="@+id/shipping_cost_label"
+                        android:paddingTop="@dimen/space_1"
+                        />
+
+                </RelativeLayout>
+                <!--End Shipping Cost-->
+
+                <include layout="@layout/ui_line_black"/>
+
+                <!--Start Total Amount-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/total_amount_label"
+                        android:layout_width="@dimen/space_15"
+                        android:layout_height="@dimen/space_4"
+                        android:paddingTop="@dimen/space_1"
+                        android:text="@string/order_total_amount"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/small_title" />
+
+                    <TextView
+                        android:id="@+id/total_amount_seperator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_4"
+                        android:layout_alignTop="@+id/total_amount_label"
+                        android:layout_toRightOf="@+id/total_amount_label"
+                        android:paddingLeft="@dimen/space_1"
+                        android:paddingTop="@dimen/space_1"
+                        android:text=" : "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/small_title"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/space_4"
+                        android:layout_alignTop="@+id/total_amount_label"
+                        android:layout_toRightOf="@+id/total_amount_seperator"
+                        android:paddingLeft="@dimen/space_1"
+                        android:paddingTop="@dimen/space_1"
+                        android:text="10$"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sub_head"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <!--End Total Amount-->
+
+                <!--Selected Payment Option-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_6"
+                    >
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:src="@drawable/ic_selected"
+                        android:id="@+id/selected_payment_option"
+                        />
+
+                    <TextView
+                        android:id="@+id/selected_payment_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/selected_payment_option"
+                        android:layout_marginBottom="@dimen/space_mini_4"
+                        android:layout_marginTop="@dimen/space_mini_2"
+                        android:layout_toRightOf="@+id/selected_payment_option"
+                        android:paddingLeft="@dimen/space_1"
+                        android:text="@string/selected_payment_option"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small_title"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/ui_line_black"/>
+
+                <TextView
+                    android:id="@+id/selected_payment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/small_title"
+                    android:paddingTop="@dimen/space_2"
+                    />
+
+                <!--User Information-->
+
+                <!--Selected Payment Option-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    >
+
+                    <ImageView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/icon_size"
+                        android:layout_height="@dimen/icon_size"
+                        android:src="@drawable/ic_user_info"
+                        android:id="@+id/user_info_img"
+                        />
+
+                    <TextView
+                        android:id="@+id/user_information"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/user_info_img"
+                        android:layout_marginBottom="@dimen/space_mini_4"
+                        android:layout_marginTop="@dimen/space_mini_2"
+                        android:layout_toRightOf="@+id/user_info_img"
+                        android:paddingLeft="@dimen/space_1"
+                        android:text="@string/user_information"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/small_title"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <include layout="@layout/ui_line_black"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2">
+
+                    <EditText
+                        android:id="@+id/input_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:hint="@string/name"
+                        android:textSize="@dimen/small_title"
+                        android:lines="1" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2">
+
+                    <EditText
+                        android:id="@+id/input_email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:hint="@string/email"
+                        android:textSize="@dimen/small_title"
+                        android:lines="1" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2">
+
+                    <EditText
+                        android:id="@+id/input_phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:hint="@string/phone"
+                        android:textSize="@dimen/small_title"
+                        android:lines="1" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2">
+
+                    <EditText
+                        android:id="@+id/input_delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:textSize="@dimen/small_title"
+                        android:hint="@string/delivery_address" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_billing_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2">
+
+                    <EditText
+                        android:id="@+id/input_billing_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:textSize="@dimen/small_title"
+                        android:hint="@string/billing_address" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btn_confirm_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/space_5"
+                    android:layout_marginLeft="@dimen/space_3"
+                    android:layout_marginRight="@dimen/space_3"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:background="@color/colorPrimary"
+                    android:onClick="doConfirmCheckout"
+                    android:paddingLeft="@dimen/space_1"
+                    android:paddingRight="@dimen/space_1"
+                    android:text="@string/confirm_checkout"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/button" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

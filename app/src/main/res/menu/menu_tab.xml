@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.panaceasoft.restaurateur.activities.SubCategoryActivity">
+
+    <item android:id="@+id/action_sorting" android:title="@string/action_settings"
+        android:icon="@drawable/ic_sorting_white"
+        android:visible="false"
+        android:orderInCategory="100" app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_filter"
+        android:title=""
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+</menu>

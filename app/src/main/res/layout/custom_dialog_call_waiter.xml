@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_round_corner">
+
+
+    <TextView
+        android:id="@+id/text_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_req"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_3"
+        android:textSize="@dimen/head"
+        android:layout_below="@+id/img_icon"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/edit_req"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_1"
+        android:layout_marginRight="@dimen/space_1"
+        android:layout_marginTop="@dimen/space_1"
+        android:layout_gravity="top|left"
+        android:gravity="top|left"
+        android:padding="@dimen/space_mini_4"
+        android:hint="i.e. Refill my drink, I need more hot sauce"
+        android:background="@color/windowBackground"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/space_3">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/text_call_waiter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/call_waiter"
+                android:padding="@dimen/space_2"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/head"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/text_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:padding="@dimen/space_2"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/head"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorGray"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

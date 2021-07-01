@@ -1,0 +1,157 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<android.support.design.widget.AppBarLayout-->
+            <!--android:id="@+id/app_bar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:elevation="0dp"-->
+            <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/head"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whiteColor"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </android.support.v7.widget.Toolbar>
+
+        <!--</android.support.design.widget.AppBarLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_11"
+            android:layout_marginLeft="@dimen/space_2"
+            android:layout_marginRight="@dimen/space_2"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/loading_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_2"
+                android:paddingLeft="@dimen/space_1">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:tint="@color/textColorSecondary"
+                    android:src="@drawable/ic_person_black" />
+
+                <TextView
+                    android:id="@+id/login_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_1"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingRight="@dimen/space_1"
+                    android:paddingLeft="@dimen/space_1"
+                    android:textSize="@dimen/caption" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_1">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:tint="@color/textColorSecondary"
+                    android:src="@drawable/ic_mail_black" />
+
+                <TextView
+                    android:id="@+id/login_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_1"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingRight="@dimen/space_1"
+                    android:paddingLeft="@dimen/space_1"
+                    android:textSize="@dimen/caption" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2">
+
+                <EditText
+                    android:id="@+id/input_review_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:hint="@string/review" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_submit"
+                android:layout_marginTop="@dimen/space_3"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_green_sel"
+                android:paddingBottom="@dimen/space_1"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/submit"
+                android:onClick="doReview"/>
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="MEDIUM_RECTANGLE"
+                ads:adUnitId="@string/banner_ad_unit_id">
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

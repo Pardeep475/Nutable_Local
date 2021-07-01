@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_transaction_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/space_mini_2"
+    android:background="@color/lineColor"
+    android:scaleType="fitXY"
+    android:padding="@dimen/space_1"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/space_mini_3"
+        android:layout_marginLeft="@dimen/space_mini_3"
+        android:layout_marginRight="@dimen/space_mini_3"
+        android:paddingTop="@dimen/space_mini_5"
+        android:paddingLeft="@dimen/space_mini_3"
+        android:paddingRight="@dimen/space_mini_3"
+        android:background="@color/whiteColor"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_reservation"
+                android:id="@+id/date_image"
+                android:paddingLeft="4dp"
+                />
+
+            <TextView
+                android:id="@+id/date_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:paddingLeft="@dimen/space_1"
+                android:layout_toRightOf="@+id/date_image"
+                android:layout_alignTop="@+id/date_image"
+                android:text="@string/reservation_info"
+                android:textSize="@dimen/small_title"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textColorSecondary" />
+
+        <!-- Start Reservation Info -->
+        <TextView
+            android:paddingTop="@dimen/space_1"
+            android:id="@+id/tv_resv_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2" />
+
+        <TextView
+            android:id="@+id/tv_resv_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2" />
+
+        <TextView
+            android:id="@+id/tv_resv_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/transaction_status"
+            android:textSize="@dimen/body2" />
+
+        <TextView
+            android:id="@+id/tv_resv_status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2" />
+
+        <!-- End Reservation Info -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_user_info"
+                android:id="@+id/user_image"
+                android:paddingLeft="4dp"
+                />
+
+            <TextView
+                android:id="@+id/user_info__title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:paddingLeft="@dimen/space_1"
+                android:layout_toRightOf="@+id/user_image"
+                android:layout_alignTop="@+id/user_image"
+                android:text="@string/user_information"
+                android:textSize="@dimen/small_title"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/textColorSecondary" />
+
+        <TextView
+            android:paddingTop="@dimen/space_1"
+            android:id="@+id/tv_user_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2" />
+
+
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2" />
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2" />
+
+        <TextView
+            android:id="@+id/tv_user_note"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:textColor="@color/textColorSecondary"
+            android:layout_marginBottom="@dimen/space_1"
+            android:lineSpacingMultiplier = "1.15"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/body2"
+            android:paddingBottom="@dimen/space_2"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

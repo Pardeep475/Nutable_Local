@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:weightSum="1"
+    tools:context="com.panaceasoft.restaurateur.fragments.ScanFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".75"
+        android:background="@drawable/bg_round_blue">
+
+        <ImageView
+            android:id="@+id/img_fruit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/bg_fruit"/>
+
+        <ImageView
+            android:id="@+id/img_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_scan"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal|bottom"
+        android:layout_weight=".25"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_scan_sel"
+            android:text="@string/scan"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_16"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/whiteColor" />
+
+        <TextView
+            android:id="@+id/text_manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manually_select"
+            android:textSize="@dimen/text_size_14"
+            android:padding="@dimen/space_1"
+            android:textColor="@color/blue_color"
+            android:layout_marginBottom="@dimen/space_1"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="@dimen/space_2"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

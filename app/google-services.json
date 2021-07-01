@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "172689956903",
+    "firebase_url": "https://restaurateur-ca11e.firebaseio.com",
+    "project_id": "restaurateur-ca11e",
+    "storage_bucket": "restaurateur-ca11e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172689956903:android:bdcbcddb18f8f8ac",
+        "android_client_info": {
+          "package_name": "com.panaceasoft.restaurateur"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172689956903-gfbbc1uo60b5ikb9unm0j1sb4bado5hd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.panaceasoft.restaurateur",
+            "certificate_hash": "f6011054a750e53aed959482a143be229027992f"
+          }
+        },
+        {
+          "client_id": "172689956903-0m9mch1fvehq0pdqlhh130b9329u2qt3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGT7F0kMBNEhSlGm1V0dJoZPseS4pKr4U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172689956903-0m9mch1fvehq0pdqlhh130b9329u2qt3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

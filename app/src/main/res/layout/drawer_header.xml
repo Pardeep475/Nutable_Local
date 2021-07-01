@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_6"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_1"
+        android:textSize="@dimen/title"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="@dimen/space_3"
+                android:background="@color/colorDivider"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_3"/>
+
+            <TextView
+                android:id="@+id/nav_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/head"
+                android:padding="@dimen/space_1"
+                android:textColor="@color/cardview_dark_background"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="@dimen/space_3"
+                android:background="@color/colorDivider"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/nav_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_keyword"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/head"
+                android:padding="@dimen/space_1"
+                android:textColor="@color/cardview_dark_background"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="@dimen/space_3"
+                android:background="@color/colorDivider"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/nav_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/head"
+                android:padding="@dimen/space_1"
+                android:visibility="gone"
+                android:textColor="@color/cardview_dark_background"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:id="@+id/lay_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nav_reservation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reservation"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/head"
+                    android:padding="@dimen/space_1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_3"
+                    android:background="@color/colorDivider"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/nav_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/head"
+                    android:padding="@dimen/space_1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_3"
+                    android:background="@color/colorDivider"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/nav_saved_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saved_card"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/head"
+                    android:padding="@dimen/space_1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_3"
+                    android:background="@color/colorDivider"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/nav_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fav_item"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/head"
+                    android:padding="@dimen/space_1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_3"
+                    android:background="@color/colorDivider"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/nav_transaction_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/transaction_history"
+                    android:textSize="@dimen/head"
+                    android:padding="@dimen/space_1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_3"
+                    android:background="@color/colorDivider"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/nav_reserve_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reservation_history"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/head"
+                    android:padding="@dimen/space_1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <Button
+                    android:id="@+id/button_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:layout_marginBottom="@dimen/space_2"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="@dimen/space_2"
+                    android:background="@drawable/btn_green_sel"
+                    android:text="@string/logout"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

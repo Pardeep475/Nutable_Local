@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_login"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_11">
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_15"
+            tools:context="com.panaceasoft.restaurateur.fragments.ProfileFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:src="@drawable/ic_person_black"
+                    android:id="@+id/iv_profile_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    app:border_width="1dp"
+                    app:border_color="#e8e8e8" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/space_2"
+                android:layout_marginRight="@dimen/space_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".2">
+                        <TextView
+                            android:id="@+id/tv_name_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/name"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".8">
+                        <EditText
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="text"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Name" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".2">
+                        <TextView
+                            android:id="@+id/tv_email_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".8">
+                        <EditText
+                            android:id="@+id/tv_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="textEmailAddress"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Email" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".4">
+                        <TextView
+                            android:id="@+id/tv_phone_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobile_no"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".6">
+                        <EditText
+                            android:id="@+id/tv_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="phone"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Mobile Number" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".3">
+                        <TextView
+                            android:id="@+id/tv_about_me_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_me"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".7">
+                        <EditText
+                            android:id="@+id/tv_about_me"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="text"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="About Me" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".3">
+                        <TextView
+                            android:id="@+id/tv_allergy_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/alergy_info1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".7">
+                        <EditText
+                            android:id="@+id/tv_allergy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="text"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Allergy Info" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".45">
+                        <TextView
+                            android:id="@+id/tv_delivery_address_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delivery_address_1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".55">
+                        <EditText
+                            android:id="@+id/tv_delivery_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="text"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Delivery Address" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".4">
+                        <TextView
+                            android:id="@+id/tv_billing_address_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/billing_address_1"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textSize="@dimen/body2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".6">
+                        <EditText
+                            android:id="@+id/tv_billing_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space_1"
+                            android:textSize="@dimen/body2"
+                            android:gravity="right"
+                            android:inputType="text"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/montserrat_regular"
+                            tools:text="Billing Address" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/ui_line"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
