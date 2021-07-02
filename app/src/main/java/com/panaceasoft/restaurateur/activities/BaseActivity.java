@@ -71,6 +71,8 @@ public class BaseActivity extends AppCompatActivity {
             _longitude = gpsTracker.getLongitude();
         }
 
+
+
         locationCurrent.setLatitude(_latitude);
         locationCurrent.setLongitude(_longitude);
 
