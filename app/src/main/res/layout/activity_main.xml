@@ -13,7 +13,7 @@
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@android:color/transparent">
+        android:background="@color/colorPrimaryDarkPurple">
 
         <include layout="@layout/drawer_header"/>
 

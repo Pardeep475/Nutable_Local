@@ -192,7 +192,7 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
         etUserBillingAddress = findViewById(R.id.input_billing_address);
         etUserBillingAddress.setTypeface(Utils.getTypeFace(getApplicationContext(), Utils.Fonts.ROBOTO));
 
-        Button btnConfirmCheckout = findViewById(R.id.btn_confirm_checkout);
+        TextView btnConfirmCheckout = findViewById(R.id.textConfirm);
         btnConfirmCheckout.setTypeface(Utils.getTypeFace(getApplicationContext(), Utils.Fonts.ROBOTO));
 
     }
@@ -203,6 +203,7 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
             toolbar = findViewById(R.id.toolbar);
             toolbarTitle = toolbar.findViewById(R.id.toolbar_title);
             toolbar.setTitle("");
+            toolbarTitle.setText("User Information");
             setSupportActionBar(toolbar);
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
@@ -242,7 +243,7 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
             selectedShopId = getIntent().getIntExtra("selected_shop_id", 0);
             Bundle bundle = getIntent().getExtras();
 
-            if(bundle != null) {
+           /* if(bundle != null) {
 
                 selectedPayemntOption = bundle.getString("selected_payment_option");
                 //String couponName = bundle.getString("coupon_name");
@@ -298,7 +299,7 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
                 jsonStatusSuccessString = getResources().getString(R.string.json_status_success);
                 checkoutConfirmString = Utils.getSpannableString(getApplicationContext(), getString(R.string.title_checkout_confirm));
 
-            }
+            }*/
 
         } catch (Resources.NotFoundException e) {
             Utils.psErrorLogE("Error in initToolbar.", e);
@@ -314,8 +315,6 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
      **------------------------------------------------------------------------------------------------*/
 
     private void bindData() {
-//        toolbar.setTitle(checkoutConfirmString);
-        toolbarTitle.setText(checkoutConfirmString);
     }
 
     private void submitOrderToServer() {
@@ -452,8 +451,16 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
      **------------------------------------------------------------------------------------------------*/
 
     public void doConfirmCheckout(View view) {
+        Intent intent = new Intent(getApplicationContext(), SplitPaymentActivity.class);
+        intent.putExtra("selected_shop_id", selectedShopId);
+        intent.putExtra("user_email", etUserEmail.getText().toString());
+        intent.putExtra("user_phone", etUserPhone.getText().toString());
+        intent.putExtra("user_delivery_address", etUserDeliveryAddress.getText().toString());
+        intent.putExtra("user_billing_address", etUserBillingAddress.getText().toString());
+        startActivity(intent);
+        overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
 
-        switch (selectedPayemntOption) {
+      /*  switch (selectedPayemntOption) {
             case "stripe":
                 Intent intent = new Intent(getApplicationContext(), StripeActivity.class);
                 intent.putExtra("selected_shop_id", selectedShopId);
@@ -476,7 +483,7 @@ public class CheckoutConfirmActivity extends AppCompatActivity{
                 loadBasketData("cod");
                 submitOrderToServer();
                 break;
-        }
+        }*/
 
 
     }

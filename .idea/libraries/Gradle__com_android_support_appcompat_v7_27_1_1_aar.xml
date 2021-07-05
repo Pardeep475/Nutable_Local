@@ -3,10 +3,14 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c2065bafb2a88bd5e3208425950525c5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c2065bafb2a88bd5e3208425950525c5/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ab8bac9f7f962ba170d400f36a685f95/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ab8bac9f7f962ba170d400f36a685f95/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ab8bac9f7f962ba170d400f36a685f95/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

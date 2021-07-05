@@ -46,8 +46,8 @@
     <!-- End Pink Based Theme Colors -->
 
     <!-- Start Purple Based Theme Colors -->
-    <color name="colorPrimaryPurple">#673AB7</color>
-    <color name="colorPrimaryDarkPurple">#512DA8</color>
+    <color name="colorPrimaryPurple">#3C089E</color>
+    <color name="colorPrimaryDarkPurple">#0f002b</color>
     <color name="colorPrimaryLightPurple">#D1C4E9</color>
     <color name="colorAccentPurple">#4CAF50</color>
     <color name="colorBackgroundPurple">#F2f2f2</color>

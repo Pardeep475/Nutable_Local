@@ -3,6 +3,9 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/9b4d6857d74830a7be24b6c8d6d97c4f/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/9b4d6857d74830a7be24b6c8d6d97c4f/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/337cdf428426304794865f6240f06b2f/AndroidManifest.xml" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/337cdf428426304794865f6240f06b2f/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/337cdf428426304794865f6240f06b2f/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

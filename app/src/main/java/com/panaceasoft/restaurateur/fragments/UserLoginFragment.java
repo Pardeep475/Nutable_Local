@@ -15,6 +15,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -102,6 +103,8 @@ public class UserLoginFragment extends Fragment {
         initData();
 
         initUI();
+
+        setupHyperlink();
 
         return view;
     }
@@ -631,6 +634,11 @@ public class UserLoginFragment extends Fragment {
         Utils.psLog("OnActivityResultFbLogin");
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void setupHyperlink() {
+        TextView linkTextView = view.findViewById(R.id.text_privacy_2);
+        linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 

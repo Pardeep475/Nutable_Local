@@ -30,7 +30,7 @@
         android:padding="@dimen/space_mini_4"
         android:gravity="center"
         android:hint="Enter here"
-        android:inputType="number"
+        android:inputType="text"
         android:singleLine="true"
         android:maxLength="10"
         android:background="@color/windowBackground"/>

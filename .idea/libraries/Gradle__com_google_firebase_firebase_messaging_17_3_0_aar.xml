@@ -3,6 +3,9 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.3.0.aar/8c4d2d49e957b93855828571f53fca24/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.3.0.aar/8c4d2d49e957b93855828571f53fca24/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/firebase-messaging-17.3.0.aar/9fb97c3a1976f1eef4bc76b6ee23244a/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/firebase-messaging-17.3.0.aar/9fb97c3a1976f1eef4bc76b6ee23244a/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/firebase-messaging-17.3.0.aar/9fb97c3a1976f1eef4bc76b6ee23244a/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

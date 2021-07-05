@@ -11,6 +11,8 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.view.Gravity;
@@ -22,11 +24,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.panaceasoft.restaurateur.R;
-import com.panaceasoft.restaurateur.adapters.BasketAdapter;
+import com.panaceasoft.restaurateur.adapters.BasketAdapterSecond;
+import com.panaceasoft.restaurateur.listeners.ClickListener;
+import com.panaceasoft.restaurateur.listeners.RecyclerTouchListener;
 import com.panaceasoft.restaurateur.models.BasketData;
 import com.panaceasoft.restaurateur.utilities.DBHandler;
 import com.panaceasoft.restaurateur.utilities.Utils;
 import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -36,15 +43,15 @@ import java.util.Locale;
  * Created by Panacea-Soft on 2/7/16.
  * Contact Email : teamps.is.cool@gmail.com
  */
-public class BasketActivity extends AppCompatActivity {
+public class BasketActivity extends AppCompatActivity implements ClickListener{
     /**------------------------------------------------------------------------------------------------
      * Start Block - Private Variables
      **------------------------------------------------------------------------------------------------*/
 
     private Toolbar toolbar;
-    private ListView listView;
+    private RecyclerView listView;
     private List<BasketData> basketDataSet;
-    private BasketAdapter adapter;
+    private BasketAdapterSecond adapter;
     private SpannableString basketString;
     DBHandler db = new DBHandler(this);
     private CoordinatorLayout coordinatorLayout;
@@ -55,6 +62,8 @@ public class BasketActivity extends AppCompatActivity {
     private int selectedShopId;
     private Picasso p;
     private TextView toolbarTitle;
+    private TextView mPayNow;
+    TextView mTextTotal;
 
 
     /*------------------------------------------------------------------------------------------------
@@ -74,7 +83,8 @@ public class BasketActivity extends AppCompatActivity {
         initData();
         initUI();
         bindData();
-        initSnackBar();
+        setClicks();
+        //initSnackBar();
     }
 
     @Override
@@ -107,7 +117,7 @@ public class BasketActivity extends AppCompatActivity {
 
             Utils.psLog(" Ready To Payment Option ");
 
-            Intent intent = new Intent(getApplicationContext(), PaymentOptionActivity.class);
+            Intent intent = new Intent(getApplicationContext(), CheckoutConfirmActivity.class);
             intent.putExtra("selected_shop_id", selectedShopId);
             //startActivity(intent);
             startActivityForResult(intent, 1);
@@ -226,21 +236,10 @@ public class BasketActivity extends AppCompatActivity {
     private void initList() {
         try {
             listView = findViewById(R.id.basket_list);
-            listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+            listView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false));
+            mPayNow=findViewById(R.id.textPayNow);
+            mTextTotal=findViewById(R.id.textTotal);
             Utils.psLog("Found List View");
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Utils.psLog("Position : " + position );
-
-                    BasketData basketData = (BasketData) adapter.getItem(position);
-                    Utils.psLog(" Basket Position basketDataID " + basketData.id );
-
-                    openDetailActivity(basketData.item_id, basketData.shop_id, basketData);
-
-                }
-            });
-            //listView.setOnItemClickListener(new ListClickHandler());
         } catch (Exception e) {
             Utils.psErrorLogE("Error in initList.", e);
         }
@@ -292,8 +291,9 @@ public class BasketActivity extends AppCompatActivity {
         try {
 //            toolbar.setTitle(basketString);
             toolbarTitle.setText(basketString);
+
             basketDataSet = new ArrayList<>();
-            adapter = new BasketAdapter(this, basketDataSet, pref.getInt("_login_user_id", 0), db, selectedShopId, p);
+            adapter = new BasketAdapterSecond(this, basketDataSet, pref.getInt("_login_user_id", 0), db, selectedShopId, p,this);
             listView.setAdapter(adapter);
 
 
@@ -328,6 +328,7 @@ public class BasketActivity extends AppCompatActivity {
             }
 
             totalAmount = Double.valueOf(String.format(Locale.US, "%.2f", totalAmount));
+            mTextTotal.setText(getResources().getString(R.string.total_amount) + Utils.format(totalAmount) + currencySymbol);
         }catch (Exception e){
             Utils.psErrorLog("Error in load basket data", e);
         }
@@ -342,16 +343,45 @@ public class BasketActivity extends AppCompatActivity {
             //updateAmount = Double.valueOf(String.format(Locale.US, "%.2f", updateAmount));
             Utils.psLog(" updateAmount >> " + Utils.format(updateAmount));
             String totalAmountStr = "Total Amount : " + Utils.format(updateAmount) + currencySymbol;
-            snackTextView.setText(totalAmountStr);
+            mTextTotal.setText(totalAmountStr);
             totalAmount = updateAmount;
         }catch (Exception e){
             Utils.psErrorLog("Error in update total amount.", e);
         }
     }
 
+    void setClicks(){
+        mPayNow.setOnClickListener(new View.OnClickListener(
+
+        ) {
+            @Override
+            public void onClick(View v) {
+                Utils.psLog(" Ready To Payment Option ");
+
+                Intent intent = new Intent(getApplicationContext(), CheckoutConfirmActivity.class);
+                intent.putExtra("selected_shop_id", selectedShopId);
+                //startActivity(intent);
+                startActivityForResult(intent, 1);
+                overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
+            }
+        });
 
 
+    }
 
 
+    @Override
+    public void onClick(View view, int position) {
+        Utils.psLog("Position : " + position );
 
+        BasketData basketData = adapter.getItem(position);
+        Utils.psLog(" Basket Position basketDataID " + basketData.id );
+
+        openDetailActivity(basketData.item_id, basketData.shop_id, basketData);
+    }
+
+    @Override
+    public void onLongClick(View view, int position) {
+
+    }
 }

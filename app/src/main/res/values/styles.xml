@@ -23,7 +23,7 @@
         <item name="colorButtonNormal">@color/colorPrimaryPurple</item>
         <item name="colorPrimary">@color/colorPrimaryPurple</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkPurple</item>
-        <item name="colorAccent">@color/colorAccentPurple</item>
+        <item name="colorAccent">@color/colorPrimaryPurple</item>
         <item name="android:windowBackground">@color/windowBackgroundPurple</item>
     </style>
 
@@ -61,7 +61,7 @@
 
     <style name="TextAppearance.Widget.Event.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <!--Any text styling can be done here-->
-        <item name="android:color">@color/colorAccent</item>
+        <item name="android:color">@color/colorPrimaryDarkPurple</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/title</item>
     </style>

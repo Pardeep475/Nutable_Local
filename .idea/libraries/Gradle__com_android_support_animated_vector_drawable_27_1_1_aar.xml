@@ -3,10 +3,14 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/dcf52dc5329e58843c74ef237d2f8a11/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/dcf52dc5329e58843c74ef237d2f8a11/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/8d7d5bfc781b719ac697c2ff1a799b2f/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/8d7d5bfc781b719ac697c2ff1a799b2f/AndroidManifest.xml" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/8d7d5bfc781b719ac697c2ff1a799b2f/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/animated-vector-drawable/27.1.1/a8f4121ade2fdfcc5cb20290a05333239fee05d7/animated-vector-drawable-27.1.1-sources.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/modules-2/files-2.1/com.android.support/animated-vector-drawable/27.1.1/a8f4121ade2fdfcc5cb20290a05333239fee05d7/animated-vector-drawable-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

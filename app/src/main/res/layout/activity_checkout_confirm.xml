@@ -3,7 +3,6 @@
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_login"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -16,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:elevation="0dp"
-            android:background="@android:color/transparent"
+            android:background="@color/colorPrimaryPurple"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <android.support.v7.widget.Toolbar
@@ -33,6 +32,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/head"
                     android:gravity="center"
+                    android:text="User Information"
                     android:layout_gravity="center"
                     android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
@@ -41,22 +41,22 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/space_5"
+
             android:fillViewport="true">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/stripe_payment"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/space_13"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
 
-                android:layout_marginTop="@dimen/space_1"
-                android:padding="@dimen/space_1">
+                android:layout_marginTop="@dimen/space_1">
 
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -84,10 +84,10 @@
 
                 </RelativeLayout>
 
-                <include layout="@layout/ui_line_black"/>
 
                 <!--Start Sub Total-->
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -118,6 +118,7 @@
 
                 <!--Start Coupon Discount-->
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -148,6 +149,7 @@
 
                 <!--Start Shipping Cost-->
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -176,10 +178,10 @@
                 </RelativeLayout>
                 <!--End Shipping Cost-->
 
-                <include layout="@layout/ui_line_black"/>
 
                 <!--Start Total Amount-->
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -222,6 +224,7 @@
 
                 <!--Selected Payment Option-->
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_6"
@@ -251,9 +254,9 @@
 
                 </RelativeLayout>
 
-                <include layout="@layout/ui_line_black"/>
 
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/selected_payment"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -266,9 +269,9 @@
 
                 <!--Selected Payment Option-->
                 <RelativeLayout
+                    android:id="@+id/layoutUserInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space_4"
                     >
 
                     <ImageView
@@ -299,6 +302,7 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/text_input_name"
+                    android:layout_below="@+id/layoutUserInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_2">
@@ -315,6 +319,7 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/text_input_email"
+                    android:layout_below="@+id/text_input_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_2">
@@ -331,6 +336,7 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/text_input_phone"
+                    android:layout_below="@+id/text_input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_2">
@@ -348,6 +354,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/text_input_delivery_address"
                     android:layout_width="match_parent"
+                    android:layout_below="@+id/text_input_phone"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_2">
 
@@ -363,6 +370,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/text_input_billing_address"
                     android:layout_width="match_parent"
+                    android:layout_below="@+id/text_input_delivery_address"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_2">
 
@@ -376,7 +384,7 @@
                 </android.support.design.widget.TextInputLayout>
 
 
-                <Button
+              <!--  <Button
                     android:id="@+id/btn_confirm_checkout"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_height"
@@ -391,9 +399,24 @@
                     android:paddingRight="@dimen/space_1"
                     android:text="@string/confirm_checkout"
                     android:textColor="@color/whiteColor"
-                    android:textSize="@dimen/button" />
+                    android:textSize="@dimen/button" />-->
 
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimaryPurple"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:onClick="doConfirmCheckout"
+                    android:text="Confirm Now"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/text_size_18"
+                    android:visibility="visible" />
+            </RelativeLayout>
 
 
         </ScrollView>

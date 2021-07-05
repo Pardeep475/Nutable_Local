@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nav_bg"
+    android:background="@color/colorPrimaryPurple"
     android:orientation="vertical">
 
     <ImageView
@@ -19,6 +19,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/space_1"
         android:textSize="@dimen/title"
+        android:textColor="@color/whiteColor"
         android:fontFamily="@font/montserrat_regular"/>
 
     <ScrollView
@@ -43,10 +44,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/home"
+                android:textColor="@color/whiteColor"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/head"
                 android:padding="@dimen/space_1"
-                android:textColor="@color/cardview_dark_background"
                 android:fontFamily="@font/montserrat_regular"/>
 
             <ImageView
@@ -63,7 +64,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/head"
                 android:padding="@dimen/space_1"
-                android:textColor="@color/cardview_dark_background"
+                android:textColor="@color/whiteColor"
                 android:fontFamily="@font/montserrat_regular"/>
 
             <ImageView
@@ -81,7 +82,7 @@
                 android:textSize="@dimen/head"
                 android:padding="@dimen/space_1"
                 android:visibility="gone"
-                android:textColor="@color/cardview_dark_background"
+                android:textColor="@color/whiteColor"
                 android:fontFamily="@font/montserrat_regular"/>
 
             <LinearLayout
@@ -99,7 +100,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textSize="@dimen/head"
                     android:padding="@dimen/space_1"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
 
                 <ImageView
@@ -116,7 +117,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textSize="@dimen/head"
                     android:padding="@dimen/space_1"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
 
                 <ImageView
@@ -133,7 +134,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textSize="@dimen/head"
                     android:padding="@dimen/space_1"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
 
                 <ImageView
@@ -184,7 +185,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textSize="@dimen/head"
                     android:padding="@dimen/space_1"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
 
                 <Button

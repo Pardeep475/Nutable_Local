@@ -3,10 +3,14 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.42.0.aar/524804124ea089485e59f15dcabb9e76/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.42.0.aar/524804124ea089485e59f15dcabb9e76/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/facebook-applinks-4.42.0.aar/144a3131a40361d11db2534372b48453/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/facebook-applinks-4.42.0.aar/144a3131a40361d11db2534372b48453/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/facebook-applinks-4.42.0.aar/144a3131a40361d11db2534372b48453/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-applinks/4.42.0/a98313e0f3e55881d645aed3e948b970cf8896d6/facebook-applinks-4.42.0-sources.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/modules-2/files-2.1/com.facebook.android/facebook-applinks/4.42.0/a98313e0f3e55881d645aed3e948b970cf8896d6/facebook-applinks-4.42.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

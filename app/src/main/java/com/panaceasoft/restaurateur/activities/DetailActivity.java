@@ -222,7 +222,7 @@ public class DetailActivity extends BaseActivity {
     public void onBackPressed() {
         Log.e("heredetailOnACt","heredetailOnACt");
         try {
-            Intent in = new Intent(DetailActivity.this, SelectedShopActivity.class);
+            Intent in = new Intent();
             in.putExtra("selected_item_id", GlobalData.itemData.id);
             in.putExtra("like_count", GlobalData.itemData.like_count);
             in.putExtra("review_count", GlobalData.itemData.review_count);
@@ -251,6 +251,7 @@ public class DetailActivity extends BaseActivity {
             menuItem = menu.findItem(R.id.action_basket);
 
             if (pref.getInt("_login_user_id", 0) != 0 && GlobalData.itemData != null) {
+                menuItem.setVisible(false);
                 basketCount = db.getBasketCountByShopId(GlobalData.itemData.shop_id);
                 if (basketCount > 0) {
                     menuItem.setIcon(Utils.buildCounterDrawable(basketCount, R.drawable.ic_shopping_cart_white, this));
@@ -405,7 +406,7 @@ public class DetailActivity extends BaseActivity {
 
             try {
                 if(!pref.getBoolean("_login_user_table_enter", false)) {
-                    doEnterTable();
+                 //   doEnterTable();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -521,6 +522,7 @@ public class DetailActivity extends BaseActivity {
             btnShopInfo.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in));
 
             Button btnAddToCart = findViewById(R.id.btn_add_to_cart);
+            TextView textAddToCart = findViewById(R.id.textAddToCart);
             btnAddToCart.setTypeface(Utils.getTypeFace(getApplicationContext(), Utils.Fonts.ROBOTO));
             btnAddToCart.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in));
 
@@ -570,21 +572,56 @@ public class DetailActivity extends BaseActivity {
             });
 
             btnAddToCart.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    if (pref.getInt("_login_user_id", 0) != 0) {
+
+                        if (!isEditMode && GlobalData.itemData != null) {
+                            basketCount = db.getBasketCountByShopId(GlobalData.itemData.shop_id);
+                            if (basketCount > 0) {
+                                intent = new Intent(getApplicationContext(), BasketActivity.class);
+                                intent.putExtra("selected_shop_id", selectedShopId);
+
+
+                                if (GlobalData.shopDatas != null) {
+
+                                    for (PShopData pShopData : GlobalData.shopDatas) {
+                                        if (pShopData.id == GlobalData.itemData.shop_id) {
+                                            GlobalData.shopdata = pShopData;
+                                            startActivityForResult(intent, 1);
+                                            overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
+                                            break;
+                                        }
+                                    }
+
+                                } else {
+                                    Toast.makeText(DetailActivity.this, "Can't find shop data.", Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                showCartEmpty();
+                            }
+                        }
+                    }
+                }
+            });
+
+            textAddToCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     if (pref.getInt("_login_user_id", 0) != 0) {
 
-                        if(!pref.getString("shop_id", "").equalsIgnoreCase("")) {
-                            if(pref.getString("shop_id", "").equalsIgnoreCase(String.valueOf(selectedShopId))) {
+                     //   if(!pref.getString("shop_id", "").equalsIgnoreCase("")) {
+                       //     if(selectedShopId==selectedShopId)) {
 
                                 if (editTextQty.getText().toString().matches("") || Integer.parseInt(editTextQty.getText().toString()) == 0) {
 
                                     showRequiredQty();
 
                                 } else {
-
-                                    AnimatorSet animSetXYS = new AnimatorSet();
+                                    doAddToCart();
+                                    /*AnimatorSet animSetXYS = new AnimatorSet();
                                     ObjectAnimator moveAnimS = ObjectAnimator.ofFloat(ivAndroid, "X", touchX);
                                     ObjectAnimator moveAnimS2 = ObjectAnimator.ofFloat(ivAndroid, "Y", touchY - 50); // 50 will be height of animator object
                                     animSetXYS.playTogether(moveAnimS, moveAnimS2);
@@ -615,7 +652,7 @@ public class DetailActivity extends BaseActivity {
                                                 public void onAnimationEnd(Animator animation) {
                                                     try {
                                                         ivAndroid.setVisibility(View.INVISIBLE);
-                                                        doAddToCart();
+
                                                     } catch (Exception e) {
                                                         Utils.psErrorLog("onAnimationEnd", e);
                                                     }
@@ -645,17 +682,17 @@ public class DetailActivity extends BaseActivity {
 
                                         }
                                     });
-                                    animSetXYS.start();
+                                    animSetXYS.start();*/
                                 }
                             } else {
                                 showFailPopup(getResources().getString(R.string.error_restaurant_login));
                             }
-                        } else {
+                       /* } else {
                             showFailPopup(getResources().getString(R.string.error_table_login));
                         }
                     } else {
                         showNeedLogin();
-                    }
+                    }*/
 
                 }
             });
@@ -1864,6 +1901,7 @@ public class DetailActivity extends BaseActivity {
                                     Utils.removeLastChar(selectedAttributeIds)
                             ), dbKeyId, GlobalData.itemData.shop_id);
                             Utils.psLog("Update Basket");
+                            Toast.makeText(DetailActivity.this,"Update Basket successfully",Toast.LENGTH_SHORT).show();
 
                         } else {
 
@@ -1892,8 +1930,9 @@ public class DetailActivity extends BaseActivity {
                                 Utils.removeLastChar(selectedAttributeIds)
                         ));
                         Utils.psLog("New Item Basket");
+                        Toast.makeText(DetailActivity.this,"Add To cart successfully",Toast.LENGTH_SHORT).show();
                     }
-                    menuItem.setVisible(true);
+                    menuItem.setVisible(false);
                     updateCartBadgeCount();
 
                 } else {

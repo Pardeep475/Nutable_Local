@@ -3,10 +3,14 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-login-4.42.0.aar/91b11f22903f3fe5d6fd6e92b03c324f/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-login-4.42.0.aar/91b11f22903f3fe5d6fd6e92b03c324f/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/facebook-login-4.42.0.aar/8a1f6efc0af9a14c71585e173d7227a1/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/facebook-login-4.42.0.aar/8a1f6efc0af9a14c71585e173d7227a1/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/facebook-login-4.42.0.aar/8a1f6efc0af9a14c71585e173d7227a1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-login/4.42.0/5e3d08fc791650cc0df09ac481295c0ed24fe4c8/facebook-login-4.42.0-sources.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/modules-2/files-2.1/com.facebook.android/facebook-login/4.42.0/5e3d08fc791650cc0df09ac481295c0ed24fe4c8/facebook-login-4.42.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

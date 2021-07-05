@@ -4,16 +4,15 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:descendantFocusability="blocksDescendants"
-    android:padding="8dp" >
+    android:padding="8dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/thumbnail"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:src="@drawable/ic_person_black"
-        app:border_width="1dp"
-        app:border_color="#e8e8e8"/>
+        app:border_color="#e8e8e8"
+        app:border_width="1dp" />
 
     <TextView
         android:id="@+id/item_title"
@@ -34,9 +33,9 @@
         android:layout_below="@id/item_title"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/thumbnail"
-        android:textColor="@color/textColorSecondary"
         android:paddingLeft="@dimen/space_2"
         android:text="Price : 10 $"
+        android:textColor="@color/textColorSecondary"
         android:textSize="@dimen/caption" />
 
     <TextView
@@ -45,65 +44,104 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/item_price"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:textColor="@color/textColorSecondary"
-        android:paddingLeft="@dimen/space_2"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:paddingStart="@dimen/space_2"
         android:text="Sub Total : 20 $"
+        android:textColor="@color/textColorSecondary"
         android:textSize="@dimen/caption" />
 
     <TextView
-            android:id="@+id/item_attr"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/item_sub_total"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/thumbnail"
-            android:textColor="@color/textColorSecondary"
-            android:paddingLeft="@dimen/space_2"
-            android:text="Attribute : "
-            android:textSize="@dimen/caption" />
-
-    <Button
-        android:id="@+id/increase_btn"
-        android:layout_width="@dimen/icon_size"
-        android:layout_height="@dimen/icon_size"
-        android:layout_marginTop="@dimen/space_1"
-        android:layout_below="@id/item_attr"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/ic_increase" />
-
+        android:id="@+id/item_attr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_sub_total"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="@dimen/space_2"
+        android:text="Attribute : "
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/caption"
+        android:visibility="gone" />
 
 
     <TextView
-        android:id="@+id/item_qty"
+        android:id="@+id/qty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/increase_btn"
-        android:layout_toLeftOf="@+id/increase_btn"
-        android:textSize="@dimen/small_title"
-        android:textColor="@color/textColorPrimary"
-        android:paddingLeft="@dimen/space_1"
-        android:paddingRight="@dimen/space_1"
-        android:text="QTY : 2" />
+        android:layout_below="@+id/item_attr"
+        android:layout_alignTop="@+id/layoutQty"
+        android:layout_alignBottom="@+id/layoutQty"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/space_2"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="QTY"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/caption" />
 
 
-    <Button
-        android:id="@+id/decrease_btn"
-        android:layout_width="@dimen/icon_size"
-        android:layout_height="@dimen/icon_size"
-        android:layout_alignTop="@+id/item_qty"
-        android:layout_toLeftOf="@+id/item_qty"
-        android:background="@drawable/ic_decrease" />
+    <RelativeLayout
+        android:id="@+id/layoutQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_attr"
+        android:layout_marginStart="@dimen/space_2"
+        android:layout_marginTop="@dimen/space_mini_4"
+        android:layout_toEndOf="@+id/qty"
+        android:background="@drawable/bg_add_qty"
+        android:padding="@dimen/space_mini_3">
 
 
-    <Button
+        <ImageView
+            android:id="@+id/increase_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space_mini_2"
+            android:src="@drawable/ic_add" />
+
+
+        <TextView
+            android:id="@+id/item_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/increase_btn"
+            android:paddingLeft="@dimen/space_1"
+            android:paddingRight="@dimen/space_1"
+            android:text="2"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/small_title" />
+
+
+        <ImageView
+            android:id="@+id/decrease_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_qty"
+            android:layout_toEndOf="@+id/item_qty"
+            android:padding="@dimen/space_mini_2"
+            android:src="@drawable/ic_minus" />
+
+    </RelativeLayout>
+
+    <ImageView
         android:id="@+id/delete_btn"
         android:layout_width="@dimen/icon_medium"
         android:layout_height="@dimen/icon_medium"
-        android:layout_alignTop="@+id/decrease_btn"
-        android:layout_toLeftOf="@+id/decrease_btn"
-        android:layout_marginRight="@dimen/space_2"
-        android:background="@drawable/ic_delete" />
+        android:layout_alignTop="@+id/layoutQty"
+        android:layout_alignBottom="@+id/layoutQty"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/space_2"
+        android:gravity="center_vertical"
+        android:src="@drawable/ic_delete" />
+
+    <View
+        android:layout_marginTop="@dimen/space_mini_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/delete_btn"
+        android:background="@color/colorDivider" />
 
 </RelativeLayout>

@@ -938,15 +938,15 @@ public class SelectedShopActivity extends BaseActivity implements ViewPager.OnPa
 
     public void doOrderHistory(View view) {
         if (basketCount > 0) {
-            if(!prefs.getString("shop_id", "").equalsIgnoreCase("") &&
-                    prefs.getString("shop_id", "").equalsIgnoreCase(String.valueOf(selectedShopID))) {
+          /*  if(!prefs.getString("shop_id", "").equalsIgnoreCase("") &&
+                    prefs.getString("shop_id", "").equalsIgnoreCase(String.valueOf(selectedShopID))) {*/
                 Intent intent = new Intent(getApplicationContext(), BasketActivity.class);
                 intent.putExtra("selected_shop_id", selectedShopID);
                 startActivityForResult(intent, 1);
                 overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
-            } else {
+           /* } else {
                 showFailPopup(getResources().getString(R.string.error_restaurant_login));
-            }
+            }*/
         } else {
             showCartEmpty();
         }

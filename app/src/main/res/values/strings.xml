@@ -78,7 +78,7 @@
     <string name="add_first_review">Add First Review</string>
     <string name="add_new_review">Add New Resview</string>
     <string name="ratings">Ratings</string>
-    <string name="facebook_app_id">417871255398002</string>
+    <string name="facebook_app_id">4041514165931336</string>
     <string name="fb_login_protocol_scheme">fb417871255398002</string>
     <string name="facebook_login">Facebook Login</string>
     <string name="twitter_login">Twitter Login</string>
@@ -91,6 +91,7 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="forgot_password_title">Forgot Password</string>
     <string name="register">Register</string>
+    <string name="register_new_user">Register New User</string>
     <string name="password_validation_message">Please fill the password.</string>
     <string name="login_fail">Login not successful. Please try again later.</string>
     <string name="title_activity_review_entry">ReviewEntry</string>
@@ -163,7 +164,7 @@
     <string name="qty_required">Please provide for QTY.</string>
     <string name="discount_available">(Discount Available)</string>
     <string name="qty_different_required">Please provide different QTY.</string>
-    <string name="title_activity_basket">Basket</string>
+    <string name="title_activity_basket">Order History</string>
     <string name="sub_total">Sub Total :</string>
     <string name="attribute">Attribute :</string>
     <string name="total_amount">Total Amount : </string>
@@ -257,16 +258,13 @@
     <string name="size">Size</string>
 
 
-
-
     <string name="splash_name">nuTable</string>
     <string name="scan">Scan</string>
     <string name="manually_select">or Manually Select Restaurant</string>
-
+    <string name="terms_cond_2"><a href="https://nutable.io/terms.php">Terms &amp; Condition </a></string>
+    <string name="terms_cond_4"><a href="https://nutable.io/policy.php">Privacy Policy</a></string>
     <string name="terms_cond_1">By registering you agree to our</string>
-    <string name="terms_cond_2">Terms &amp; Condition </string>
     <string name="terms_cond_3">and </string>
-    <string name="terms_cond_4">Privacy Policy</string>
 
     <string name="login_fb">Log in with Facebook</string>
 
@@ -332,7 +330,6 @@
     <string name="error_table_login">You are not logged into the table</string>
 
     <string name="select_user_table">Users</string>
-
 
 
 </resources>

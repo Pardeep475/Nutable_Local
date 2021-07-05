@@ -107,6 +107,7 @@ public class BasketAdapter extends BaseAdapter implements ListAdapter {
                 holder.txtAttr.startAnimation(AnimationUtils.loadAnimation(this.activity, R.anim.fade_in));
 
                 holder.txtItemQty = convertView.findViewById(R.id.item_qty);
+                holder.txtQty = convertView.findViewById(R.id.qty);
 
                 holder.txtItemQty.startAnimation(AnimationUtils.loadAnimation(this.activity, R.anim.fade_in));
 
@@ -118,6 +119,7 @@ public class BasketAdapter extends BaseAdapter implements ListAdapter {
                     holder.txtItemSubTotal.setTypeface(Utils.getTypeFace(context, Utils.Fonts.ROBOTO));
                     holder.txtAttr.setTypeface(Utils.getTypeFace(context, Utils.Fonts.ROBOTO));
                     holder.txtItemQty.setTypeface(Utils.getTypeFace(context, Utils.Fonts.ROBOTO));
+                    holder.txtQty.setTypeface(Utils.getTypeFace(context, Utils.Fonts.ROBOTO));
                 }
 
                 holder.btnDelete = convertView.findViewById(R.id.delete_btn);
@@ -140,7 +142,7 @@ public class BasketAdapter extends BaseAdapter implements ListAdapter {
                     public void onClick(View v) {
                         itemQty = db.getQTYByKeyIds(basketData.get(position).getId(), basketData.get(position).getShopId()) + 1;
 
-                        String qtyStr = "QTY : " + " " + itemQty;
+                        String qtyStr =  String.valueOf(itemQty);
                         holder.txtItemQty.setText(qtyStr);
                         //String tmpItemSubTotal = "Sub Total : " + String.valueOf(String.format(Locale.US, "%.2f", (Float.valueOf(basketData.get(position).getUnitPrice()) * itemQty)) + basketData.get(position).getCurrencySymbol());
                         String tmpItemSubTotal = "Sub Total : " + Utils.format(Double.valueOf(basketData.get(position).getUnitPrice()) * itemQty) + basketData.get(position).getCurrencySymbol();
@@ -177,7 +179,7 @@ public class BasketAdapter extends BaseAdapter implements ListAdapter {
 
                             itemQty = db.getQTYByKeyIds(basketData.get(position).getId(), basketData.get(position).getShopId()) - 1;
 
-                            String qtyStr = "QTY : " + " " + itemQty;
+                            String qtyStr =  String.valueOf(itemQty);
                             holder.txtItemQty.setText(qtyStr);
                             String tmpItemSubTotal = "Sub Total : " + String.valueOf(String.format(Locale.US, "%.2f", (Float.valueOf(basketData.get(position).getUnitPrice()) * itemQty)) + basketData.get(position).getCurrencySymbol());
                             holder.txtItemSubTotal.setText(tmpItemSubTotal);
@@ -220,7 +222,7 @@ public class BasketAdapter extends BaseAdapter implements ListAdapter {
                 String attrString = this.mContext.getResources().getString(R.string.attribute) + " " + basket.selected_attribute_names;
                 holder.txtAttr.setText(attrString);
 
-                String itemQtyStr = this.mContext.getResources().getString(R.string.qty) + " " + basket.getQty();
+                String itemQtyStr =String.valueOf(basket.getQty());
                 holder.txtItemQty.setText(itemQtyStr);
                 itemQty = basket.getQty();
 
@@ -289,9 +291,10 @@ public class BasketAdapter extends BaseAdapter implements ListAdapter {
         private TextView txtItemPrice;
         private TextView txtItemSubTotal;
         private TextView txtItemQty;
-        private Button btnDelete;
-        private Button btnIncrease;
-        private Button btnDecrease;
+        private TextView txtQty;
+        private ImageView btnDelete;
+        private ImageView btnIncrease;
+        private ImageView btnDecrease;
         private TextView txtAttr;
     }
 
