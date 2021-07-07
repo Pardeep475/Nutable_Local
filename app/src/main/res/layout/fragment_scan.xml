@@ -21,7 +21,7 @@
             android:background="@drawable/bg_fruit"/>
 
         <ImageView
-            android:layout_marginTop="?actionBarSize"
+
             android:id="@+id/img_scan"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"

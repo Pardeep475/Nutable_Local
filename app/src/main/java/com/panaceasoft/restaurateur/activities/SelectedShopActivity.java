@@ -255,7 +255,6 @@ public class SelectedShopActivity extends BaseActivity implements ViewPager.OnPa
      * *------------------------------------------------------------------------------------------------
      */
     private void initUI() {
-
         try {
             jsonStatusSuccessString = getResources().getString(R.string.json_status_success);
         } catch (Exception e) {

@@ -1,15 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:palette-v7:27.1.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/e5260d02e79dca347ae4ad90f9c7cf28/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/e5260d02e79dca347ae4ad90f9c7cf28/jars/classes.jar!/" />
-      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/6830b7f6670d60e212e3f0ea984f5476/AndroidManifest.xml" />
-      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/6830b7f6670d60e212e3f0ea984f5476/res" />
       <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/6830b7f6670d60e212e3f0ea984f5476/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/6830b7f6670d60e212e3f0ea984f5476/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/6830b7f6670d60e212e3f0ea984f5476/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/palette-v7/27.1.1/af4fbc6e7a6ddaa395a8e1aace8a8fd8f248758/palette-v7-27.1.1-sources.jar!/" />
       <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/modules-2/files-2.1/com.android.support/palette-v7/27.1.1/af4fbc6e7a6ddaa395a8e1aace8a8fd8f248758/palette-v7-27.1.1-sources.jar!/" />
     </SOURCES>
   </library>

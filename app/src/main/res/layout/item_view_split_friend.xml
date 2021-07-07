@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_mini_4">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageCircle"
+
+        android:layout_width="@dimen/space_6"
+        android:layout_height="@dimen/space_6"
+        android:src="@color/colorPrimaryPurple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textFirstLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAllCaps="true"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/text_size_22"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCircle"
+        app:layout_constraintEnd_toEndOf="@+id/imageCircle"
+        app:layout_constraintStart_toStartOf="@+id/imageCircle"
+        app:layout_constraintTop_toTopOf="@+id/imageCircle"
+        tools:text="S" />
+
+
+    <TextView
+        android:id="@+id/textFriendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_mini_4"
+        android:layout_marginTop="@dimen/space_mini_2"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorPrimaryPurple"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintStart_toEndOf="@+id/imageCircle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User Name" />
+
+    <TextView
+        android:id="@+id/textFriendPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_mini_4"
+        android:layout_marginTop="@dimen/space_mini_2"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorPrimaryPurple"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintStart_toEndOf="@+id/imageCircle"
+        app:layout_constraintTop_toBottomOf="@+id/textFriendName"
+        tools:text="8872731032" />
+
+    <View
+        android:layout_marginTop="@dimen/space_mini_3"
+        android:background="@color/colorDivider"
+        app:layout_constraintTop_toBottomOf="@+id/imageCircle"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</android.support.constraint.ConstraintLayout>

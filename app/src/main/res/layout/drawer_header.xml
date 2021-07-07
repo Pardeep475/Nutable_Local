@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryPurple"
+    android:background="@color/colorPrimaryDarkPurple"
     android:orientation="vertical">
 
     <ImageView
@@ -151,7 +151,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textSize="@dimen/head"
                     android:padding="@dimen/space_1"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
 
                 <ImageView
@@ -168,7 +168,7 @@
                     android:text="@string/transaction_history"
                     android:textSize="@dimen/head"
                     android:padding="@dimen/space_1"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/whiteColor"
                     android:fontFamily="@font/montserrat_regular"/>
 
                 <ImageView

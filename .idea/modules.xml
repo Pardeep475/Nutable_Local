@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Nutable.iml" filepath="$PROJECT_DIR$/.idea/modules/Nutable.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Nutable.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Nutable.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Raman.Nutable.iml" filepath="$PROJECT_DIR$/.idea/modules/Raman.Nutable.iml" />
     </modules>
   </component>
 </project>

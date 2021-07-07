@@ -1,15 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.pnikosis:materialish-progress:1.5@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialish-progress-1.5.aar/c14d11cce324f58b8a8eebb0c3b544be/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/materialish-progress-1.5.aar/c14d11cce324f58b8a8eebb0c3b544be/jars/classes.jar!/" />
-      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/materialish-progress-1.5.aar/1904cf1a625b13b47f9a48b4e08ac84c/AndroidManifest.xml" />
       <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/materialish-progress-1.5.aar/1904cf1a625b13b47f9a48b4e08ac84c/jars/classes.jar!/" />
       <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/materialish-progress-1.5.aar/1904cf1a625b13b47f9a48b4e08ac84c/res" />
+      <root url="file://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/transforms-1/files-1.1/materialish-progress-1.5.aar/1904cf1a625b13b47f9a48b4e08ac84c/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.pnikosis/materialish-progress/1.5/23bcab147bb2fb3b4ca1fdd97e0e4164c4b416bb/materialish-progress-1.5-sources.jar!/" />
       <root url="jar://$APPLICATION_HOME_DIR$/jre/jre/bin/server/caches/modules-2/files-2.1/com.pnikosis/materialish-progress/1.5/23bcab147bb2fb3b4ca1fdd97e0e4164c4b416bb/materialish-progress-1.5-sources.jar!/" />
     </SOURCES>
   </library>

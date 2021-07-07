@@ -113,4 +113,6 @@ public class Config extends Application{
     public static final String GET_PEOPLE_ON_TABLE = "/rest/tables/get_people_on_table/shop_id/";
 //        1/table_id/1
 
+    public static final String GET_FRIEND_LIST= "/rest/appusers/AppCCUsers";
+
 }

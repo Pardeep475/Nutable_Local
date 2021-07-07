@@ -6,4 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".activities.SplitPaymentActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryPurple"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="Choose Your Friend"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/head" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/editSearchFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_mini_5"
+        android:background="@drawable/bg_card_cvc_edit_text"
+        android:padding="@dimen/space_mini_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerSplitFriendList"
+        android:layout_margin="@dimen/space_mini_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textSplitPayment"
+        app:layout_constraintTop_toBottomOf="@+id/editSearchFriend" />
+
+
+    <TextView
+        app:layout_constraintBottom_toTopOf="@+id/textSplitSkip"
+        android:id="@+id/textSplitPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryPurple"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Split  Bill"
+        android:layout_margin="@dimen/space_mini_5"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="visible" />
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textSplitSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_border"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:layout_margin="@dimen/space_mini_5"
+        android:padding="10dp"
+        android:text="Skip"
+        android:textColor="@color/colorPrimaryPurple"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="visible" />
 </android.support.constraint.ConstraintLayout>
