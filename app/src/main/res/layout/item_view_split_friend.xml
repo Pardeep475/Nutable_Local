@@ -41,7 +41,7 @@
         android:layout_marginTop="@dimen/space_mini_2"
         android:fontFamily="@font/montserrat_regular"
         android:textColor="@color/colorPrimaryPurple"
-        android:textSize="@dimen/text_size_18"
+        android:textSize="@dimen/text_size_16"
         app:layout_constraintStart_toEndOf="@+id/imageCircle"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="User Name" />
@@ -54,7 +54,7 @@
         android:layout_marginTop="@dimen/space_mini_2"
         android:fontFamily="@font/montserrat_regular"
         android:textColor="@color/colorPrimaryPurple"
-        android:textSize="@dimen/text_size_16"
+        android:textSize="@dimen/text_size_14"
         app:layout_constraintStart_toEndOf="@+id/imageCircle"
         app:layout_constraintTop_toBottomOf="@+id/textFriendName"
         tools:text="8872731032" />

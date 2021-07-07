@@ -112,7 +112,7 @@ public class ScanFragment extends Fragment {
 
             btnScan = this.view.findViewById(R.id.btn_scan);
             imgScan = this.view.findViewById(R.id.img_scan);
-            imgFruit = this.view.findViewById(R.id.img_fruit);
+          //  imgFruit = this.view.findViewById(R.id.img_fruit);
 
             textManual  =  this.view.findViewById(R.id.text_manual);
 
@@ -151,8 +151,8 @@ public class ScanFragment extends Fragment {
 
     private void doManual() {
         textManual.setEnabled(false);
-        imgScan.setVisibility(View.GONE);
-        imgFruit.setVisibility(View.VISIBLE);
+        imgScan.setVisibility(View.VISIBLE);
+//        imgFruit.setVisibility(View.GONE);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

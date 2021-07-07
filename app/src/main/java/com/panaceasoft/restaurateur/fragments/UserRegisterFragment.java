@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,6 +79,8 @@ public class UserRegisterFragment extends Fragment {
         initData();
 
         initUI();
+
+        setupHyperlink();
 
         return view;
     }
@@ -393,6 +396,12 @@ public class UserRegisterFragment extends Fragment {
 
     }
 
+    private void setupHyperlink() {
+        TextView linkTextView = view.findViewById(R.id.text_privacy_2);
+        TextView privacyText = view.findViewById(R.id.text_privacy_3);
+        linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        privacyText.setMovementMethod(LinkMovementMethod.getInstance());
+    }
     /*------------------------------------------------------------------------------------------------
      * End Block - Private Functions
      **------------------------------------------------------------------------------------------------*/

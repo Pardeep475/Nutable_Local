@@ -113,19 +113,6 @@ public class BasketActivity extends AppCompatActivity implements ClickListener{
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_payment_option) {
-
-            Utils.psLog(" Ready To Payment Option ");
-
-            Intent intent = new Intent(getApplicationContext(), CheckoutConfirmActivity.class);
-            intent.putExtra("selected_shop_id", selectedShopId);
-            //startActivity(intent);
-            startActivityForResult(intent, 1);
-            overridePendingTransition(R.anim.right_to_left, R.anim.blank_anim);
-
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

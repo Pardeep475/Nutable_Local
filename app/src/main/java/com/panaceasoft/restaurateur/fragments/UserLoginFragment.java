@@ -638,7 +638,9 @@ public class UserLoginFragment extends Fragment {
 
     private void setupHyperlink() {
         TextView linkTextView = view.findViewById(R.id.text_privacy_2);
+        TextView privacyText = view.findViewById(R.id.text_privacy_3);
         linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        privacyText.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 

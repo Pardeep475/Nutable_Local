@@ -11,17 +11,19 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".70">
+        android:layout_weight=".75">
 
-        <ImageView
+       <!-- <ImageView
             android:id="@+id/img_fruit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
-            android:background="@drawable/bg_fruit"/>
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_scan"/>-->
 
         <ImageView
-
+            android:layout_marginTop="?attr/actionBarSize"
             android:id="@+id/img_scan"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -35,16 +37,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center_horizontal|bottom"
-        android:layout_weight=".30"
+        android:layout_weight=".25"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_scan"
+            android:layout_margin="@dimen/space_2"
             android:layout_width="wrap_content"
-            android:layout_marginStart="@dimen/space_2"
-            android:layout_marginEnd="@dimen/space_2"
-            android:layout_height="80dp"
-            android:background="@drawable/btn_scan" />
+            android:layout_height="75dp"
+            android:background="@drawable/btn_scan_sel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_16"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/whiteColor" />
 
         <TextView
             android:id="@+id/text_manual"
@@ -53,10 +58,9 @@
             android:text="@string/manually_select"
             android:textSize="@dimen/text_size_14"
             android:padding="@dimen/space_1"
-            android:textColor="@color/colorPrimaryPurple"
+            android:textColor="@color/colorPrimaryDarkPurple"
             android:layout_marginBottom="@dimen/space_1"
-            android:fontFamily="@font/montserrat_bold"
-            android:layout_marginTop="@dimen/space_2"/>
+            android:fontFamily="@font/montserrat_regular" />
 
 
     </LinearLayout>

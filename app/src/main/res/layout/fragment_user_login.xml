@@ -4,7 +4,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_login"
+    android:background="@drawable/bg_background"
     android:orientation="vertical"
     tools:context="com.panaceasoft.restaurateur.fragments.UserLoginFragment">
 
@@ -67,7 +67,7 @@
             android:layout_marginTop="@dimen/space_1"
             android:padding="@dimen/space_mini_4"
             android:text="@string/register_new_user"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDarkPurple"
             android:textSize="@dimen/text_size_16"
             app:fontFamily="@font/montserrat_regular" />
 
@@ -79,25 +79,20 @@
             android:layout_marginTop="@dimen/space_mini_3"
             android:padding="@dimen/space_mini_4"
             android:text="@string/forgot_password"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDarkPurple"
             android:textSize="@dimen/text_size_16"
             app:fontFamily="@font/montserrat_regular" />
 
         <Button
             android:id="@+id/button_login"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingBottom="@dimen/space_1"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             android:layout_marginTop="@dimen/space_1"
-            android:background="@drawable/btn_green_sel"
-            android:text="@string/login"
-            android:textAllCaps="false"
-            android:includeFontPadding="false"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_size_16"
-            app:fontFamily="@font/montserrat_regular" />
+            android:background="@drawable/bg_login" />
 
 
         <FrameLayout
@@ -111,18 +106,13 @@
                 android:layout_gravity="center" />
 
             <Button
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
                 android:id="@+id/button_login_fb"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/space_1"
-                android:background="@drawable/btn_blue_sel"
-                android:paddingBottom="@dimen/space_1"
-                android:text="@string/login_fb"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/text_size_16"
-                app:fontFamily="@font/montserrat_regular" />
+                android:background="@drawable/bg_login_fb" />
         </FrameLayout>
 
     </LinearLayout>
